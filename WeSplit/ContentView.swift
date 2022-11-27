@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
-    let tipPercetanges = [10, 15, 20, 25, 0]
+    let tipPercetanges = 0..<101
     @FocusState private var amountIsFocused : Bool
     
     var totalPerPerson:Double {
@@ -44,6 +44,9 @@ struct ContentView: View {
                         }
                     }
                     
+                } header: {
+                    Image(systemName: "creditcard")
+                        .font(.title)
                 }
                 
                 Section {
@@ -53,7 +56,7 @@ struct ContentView: View {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+//                    .pickerStyle(.menu)
                 } header: {
                     Text("How much tip do you want to leave ?")
                 }
