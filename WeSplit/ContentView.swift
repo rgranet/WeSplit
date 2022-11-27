@@ -44,6 +44,9 @@ struct ContentView: View {
                         }
                     }
                     
+                } header: {
+                    Image(systemName: "creditcard")
+                        .font(.title)
                 }
                 
                 Section {
